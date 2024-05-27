@@ -1,4 +1,5 @@
 ﻿using API_Mascate.Model;
+using API_Mascate.Model.employee;
 using API_Mascate.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 

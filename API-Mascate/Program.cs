@@ -1,5 +1,6 @@
 using API_Mascate.Infraestrutura;
 using API_Mascate.Model;
+using API_Mascate.Model.employee;
 
 var builder = WebApplication.CreateBuilder(args);
 

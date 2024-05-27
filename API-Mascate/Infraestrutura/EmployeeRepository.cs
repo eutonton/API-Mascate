@@ -1,4 +1,4 @@
-﻿using API_Mascate.Model;
+﻿using API_Mascate.Model.employee;
 
 namespace API_Mascate.Infraestrutura
 {

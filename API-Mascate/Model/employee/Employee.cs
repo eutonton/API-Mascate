@@ -17,6 +17,7 @@ namespace API_Mascate.Model.employee
         [Range(0, int.MaxValue, ErrorMessage = "ReservationsMade must be a non-negative number.")]
         public int ReservationsMade { get; set; }
 
+        public Employee() { }
         public Employee(string name, int reservationsMade)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));

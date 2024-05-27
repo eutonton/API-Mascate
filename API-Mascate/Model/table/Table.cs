@@ -27,6 +27,6 @@ namespace API_Mascate.Model.table
             Chairs = chairs;
             Type = type;
             Size = size;
-        }
+        }   
     }
 }

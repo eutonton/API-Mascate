@@ -20,7 +20,7 @@ namespace API_Mascate.Model.Client
 
         [Range(0, int.MaxValue, ErrorMessage = "AbsenceCount must be a non-negative number.")]
         public int AbsenceCount { get; set; }
-
+        public Client() { }
         public Client(string name, string cpf, int absenceCount)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
