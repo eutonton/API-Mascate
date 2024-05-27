@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API_Mascate.Model
+namespace API_Mascate.Model.employee
 {
     [Table("employee")]
     public class Employee
     {
         
-        public int Id { get; set; }
+        public int employeeId { get; set; }
         public string name { get; set; }
         public int reservationsMade { get; set; }
 

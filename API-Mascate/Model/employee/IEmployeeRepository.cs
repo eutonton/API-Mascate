@@ -1,4 +1,4 @@
-﻿namespace API_Mascate.Model
+﻿namespace API_Mascate.Model.employee
 {
     public interface IEmployeeRepository
     {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API_Mascate.Model
+namespace API_Mascate.Model.client
 {
     [Table("client")]
     public class Client
@@ -16,9 +16,6 @@ namespace API_Mascate.Model
             this.name = name ?? throw new ArgumentNullException(nameof(name));
             this.CPF = CPF;
             this.AbsenceCount = AbsenceCount;
-        }
-        public Client()
-        {
         }
     }
 }
