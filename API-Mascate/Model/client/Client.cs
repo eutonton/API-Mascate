@@ -18,6 +18,10 @@ namespace API_Mascate.Model.Client
         [RegularExpression(@"^\d{11}$", ErrorMessage = "CPF must be 11 digits.")]
         public string CPF { get; set; }
 
+        [Required(ErrorMessage = "PhoneNuber is required.")]
+        [RegularExpression(@"^\d{14}$", ErrorMessage = "PhoneNuber must be 14 digits.")]
+        public string phoneNumber { get; set; }
+
         [Range(0, int.MaxValue, ErrorMessage = "AbsenceCount must be a non-negative number.")]
         public int AbsenceCount { get; set; }
         public Client() { }

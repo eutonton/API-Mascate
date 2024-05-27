@@ -9,6 +9,10 @@ namespace API_Mascate.Model.reservation
     {
         [Key]
         public int ReservationId { get; set; }
+        
+        //Alterei
+        [Required]
+        public string name { get; set; }
 
         [Required]
         public int TableId { get; set; }
