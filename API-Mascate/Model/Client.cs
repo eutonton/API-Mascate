@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace API_Mascate.Model
 {
     [Table("client")]
-    public class Employee
+    public class Client
     {
 
         public int clientId { get; set; }
@@ -11,11 +11,14 @@ namespace API_Mascate.Model
         public int CPF { get; set; }
         public int AbsenceCount { get; set; }
 
-        public Employee(string name, int CPF, int AbsenceCount)
+        public Client(string name, int CPF, int AbsenceCount)
         {
             this.name = name ?? throw new ArgumentNullException(nameof(name));
             this.CPF = CPF;
             this.AbsenceCount = AbsenceCount;
+        }
+        public Client()
+        {
         }
     }
 }
