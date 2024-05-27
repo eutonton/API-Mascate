@@ -1,20 +1,32 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_Mascate.Model.table
 {
     [Table("table")]
-    public class table
+    public class Table
     {
-        public int tableID { get; set; }
-        public Boolean Availability { get; set; }
+        [Key]
+        public int TableID { get; set; }
+
+        [Required]
+        public bool Availability { get; set; }
+
+        [Range(1, 20, ErrorMessage = "Number of chairs must be between 1 and 20.")]
         public int Chairs { get; set; }
 
-        public table(Boolean Availability, int Chairs)
+        [Required]
+        public string Type { get; set; }
+
+        [Required]
+        public string Size { get; set; }
+
+        public Table(bool availability, int chairs, string type, string size)
         {
-            this.Availability = Availability;
-            this.Chairs = Chairs;
+            Availability = availability;
+            Chairs = chairs;
+            Type = type;
+            Size = size;
         }
     }
-
- 
 }

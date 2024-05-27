@@ -1,21 +1,27 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_Mascate.Model.employee
 {
     [Table("employee")]
     public class Employee
     {
-        
-        public int employeeId { get; set; }
-        public string name { get; set; }
-        public int reservationsMade { get; set; }
+        [Key]
+        public int EmployeeId { get; set; }
+
+        [Required(ErrorMessage = "Name is required.")]
+        [StringLength(250, ErrorMessage = "Name length can't be more than 250.")]
+        public string Name { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "ReservationsMade must be a non-negative number.")]
+        public int ReservationsMade { get; set; }
 
         public Employee(string name, int reservationsMade)
         {
-            this.name = name ?? throw new ArgumentNullException(nameof(name));
-            this.reservationsMade = reservationsMade;
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            ReservationsMade = reservationsMade;
         }
     }
-
- 
 }
+
