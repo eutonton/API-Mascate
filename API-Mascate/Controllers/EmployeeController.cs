@@ -17,7 +17,7 @@ namespace API_Mascate.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(EmployeeViewModel employeeView)
+        public IActionResult Add([FromForm] EmployeeViewModel employeeView)
         {
             var employee = new Employee(employeeView.Name, employeeView.ReservationsMade);
             _employeeRepository.Add(employee);
